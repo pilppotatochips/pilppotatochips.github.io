@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shuhan Guo — undergraduate student in Electrical and Computer Engineering at Global College, Shanghai Jiao Tong University.">
+  <meta name="color-scheme" content="light dark">
+  <title>Shuhan Guo | 郭书含</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">SG</span>
+        <span>Shuhan Guo</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#now">Now</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top" class="container page-shell">
+    <aside class="profile-card card">
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/images/portrait.png" alt="Portrait of Shuhan Guo">
+      </div>
+      <div class="profile-content">
+        <p class="eyebrow">Undergraduate Student</p>
+        <h1>Shuhan Guo</h1>
+        <p class="chinese-name">郭书含</p>
+        <div class="profile-rule"></div>
+        <p class="position">Electrical and Computer Engineering</p>
+        <p class="affiliation">Global College<br>Shanghai Jiao Tong University</p>
+
+        <div class="social-links">
+          <a href="mailto:pilppotatochips@sjtu.edu.cn">Email</a>
+          <a href="https://github.com/pilppotatochips" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <section id="about" class="card section-card hero-section">
+        <p class="section-kicker">Hello!</p>
+        <h2>About Me</h2>
+        <p class="lead">
+          I am an undergraduate student in <strong>Electrical and Computer Engineering</strong>
+          at <strong>Global College, Shanghai Jiao Tong University</strong>, enrolled in 2025.
+        </p>
+        <p>
+          At this stage, I am building a broad foundation across mathematics, programming,
+          electronics, and systems. This homepage will grow alongside my coursework,
+          explorations, and future projects.
+        </p>
+        <p class="cn-intro" lang="zh-CN">
+          我是上海交通大学浦江国际学院 2025 级电子与计算机工程专业本科生。
+          目前正逐步夯实数学、编程、电子与系统方面的基础，也期待在学习中发现自己真正感兴趣的方向。
+        </p>
+      </section>
+
+      <section id="education" class="card section-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Background</p>
+            <h2>Education</h2>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="school-mark" aria-hidden="true">SJTU</div>
+          <div class="timeline-copy">
+            <div class="timeline-topline">
+              <h3>Shanghai Jiao Tong University</h3>
+              <span>2025 — Present</span>
+            </div>
+            <p>Global College</p>
+            <p class="muted">Undergraduate Student · Electrical and Computer Engineering (ECE)</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="now" class="card section-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Learning in progress</p>
+            <h2>Current Focus</h2>
+          </div>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-item">
+            <span class="focus-number">01</span>
+            <h3>Foundations</h3>
+            <p>Strengthening core foundations in mathematics and the natural sciences.</p>
+          </article>
+          <article class="focus-item">
+            <span class="focus-number">02</span>
+            <h3>Computing</h3>
+            <p>Developing programming skills and computational ways of thinking.</p>
+          </article>
+          <article class="focus-item">
+            <span class="focus-number">03</span>
+            <h3>Exploration</h3>
+            <p>Exploring the breadth of ECE before choosing a more focused direction.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card section-card updates-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Milestones</p>
+            <h2>Updates</h2>
+          </div>
+        </div>
+        <ul class="updates-list">
+          <li>
+            <time datetime="2026">2026</time>
+            <span>Launched my personal academic homepage.</span>
+          </li>
+          <li>
+            <time datetime="2025">2025</time>
+            <span>Joined the ECE undergraduate program at Global College, Shanghai Jiao Tong University.</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Shuhan Guo</p>
+    <p>Inspired by <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noreferrer">academic-homepage</a></p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) root.dataset.theme = savedTheme;
+
+    toggle.addEventListener('click', () => {
+      const current = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
